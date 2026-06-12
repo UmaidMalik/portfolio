@@ -1,7 +1,6 @@
 import { SectionHeading } from "@/components/SectionHeading"
 import {
   certifications,
-  engineeringFocus,
   skillGroups,
 } from "@/data/skills"
 
