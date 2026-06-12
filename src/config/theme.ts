@@ -1,7 +1,23 @@
-export type ThemeName = 
-    | "black-green"
-    | "purple-lavender"
-    | "midnight-amber"
-    | "cyber-cyan"
+export const themes = [
+  "purple-lavender",
+  "purple-lavender",
+  "midnight-amber",
+  "cyber-cyan",
+] as const
 
-export const ACTIVE_THEME: ThemeName = "black-green"
+export type ThemeName = (typeof themes)[number]
+
+const DEFAULT_THEME: ThemeName = "cyber-cyan"
+
+function isThemeName(value: unknown): value is ThemeName {
+  return (
+    typeof value === "string" &&
+    themes.includes(value as ThemeName)
+  )
+}
+
+const configuredTheme = import.meta.env.VITE_PORTFOLIO_THEME
+
+export const ACTIVE_THEME: ThemeName = isThemeName(configuredTheme)
+  ? configuredTheme
+  : DEFAULT_THEME
