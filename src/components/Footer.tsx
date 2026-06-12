@@ -8,7 +8,7 @@ export function Footer() {
       <div className="page-container flex flex-col gap-5 py-8 text-[0.65rem] text-[var(--subtle-foreground)] sm:flex-row sm:items-center sm:justify-between">
         <p>Umaid Malik · {currentYear}</p>
 
-        <p>Built with React, TypeScript, Tailwind CSS, and shadcn/ui</p>
+        <p>theme.rotate → daily @ 08:00 America/Toronto</p>
 
         <a
           href="#about"

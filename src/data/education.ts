@@ -8,6 +8,7 @@ export const education: Education[] = [
     location: "Montreal, Quebec",
     details: [
       "Computer Graphics",
+      "Programming on the Cloud",
       "Data Structures and Algorithms",
       "Databases",
       "Communication Networks and Protocols",

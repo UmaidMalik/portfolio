@@ -28,7 +28,7 @@ export function ProjectsSection() {
     return projects.filter((project) => project.category === activeFilter)
   }, [activeFilter])
 
-  const featuredProject = filteredProjects.find((project) => project.featured,)
+  const featuredProjects = filteredProjects.filter((project) => project.featured,)
   const additionalProjects = filteredProjects.filter((project) => !project.featured)
 
   return (
@@ -67,81 +67,90 @@ export function ProjectsSection() {
           })}
         </div>
         <div key={activeFilter} className="project-filter-results">
-        {featuredProject ? (
-          <article className="glow-hover overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
-            <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
-              <div className="p-6 sm:p-8 lg:p-10">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-xs text-[var(--accent)]">
-                    01 / FEATURED
-                  </span>
+        {featuredProjects.length > 0 ? (
+          <div className="grid gap-8">
+            {featuredProjects.map((project, index) => (
+              <article
+                key={project.slug}
+                className="glow-hover overflow-hidden border border-[var(--border)] bg-[var(--surface)]"
+              >
+                <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+                  <div className="p-6 sm:p-8 lg:p-10">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span className="text-xs text-[var(--accent)]">
+                        {String(index + 1).padStart(2, "0")} / FEATURED
+                      </span>
 
-                  <span className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--muted-foreground)]">
-                    {featuredProject.category}
-                  </span>
-                </div>
+                      <span className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--muted-foreground)]">
+                        {project.category}
+                      </span>
+                    </div>
 
-                <h3 className="mt-6 text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl">
-                  {featuredProject.title}
-                </h3>
+                    <h3 className="mt-6 text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl">
+                      {project.title}
+                    </h3>
 
-                <p className="mt-5 text-sm leading-7 text-[var(--muted-foreground)]">
-                  {featuredProject.description}
-                </p>
+                    <p className="mt-5 text-sm leading-7 text-[var(--muted-foreground)]">
+                      {project.description}
+                    </p>
 
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {featuredProject.technologies.map((technology) => (
-                    <TechTag key={technology}>{technology}</TechTag>
-                  ))}
-                </div>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {project.technologies.map((technology) => (
+                        <TechTag key={technology}>{technology}</TechTag>
+                      ))}
+                    </div>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {featuredProject.links.map((link) => {
-                    if (!link.href) {
-                      return null
-                    }
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      {project.links.map((link) => {
+                        if (!link.href) {
+                          return null
+                        }
 
-                    const Icon =
-                      link.type === "github" ? FaGithub : ArrowUpRight
+                        const Icon =
+                          link.type === "github" ? FaGithub : ArrowUpRight
 
-                    return (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="terminal-button"
-                      >
-                        <Icon className="size-3.5" />
-                        {link.label}
-                      </a>
-                    )
-                  })}
-                </div>
-              </div>
-
-              <div className="min-h-64 border-t border-[var(--border)] bg-[var(--background)] lg:border-l lg:border-t-0">
-                {featuredProject.image ? (
-                  <img
-                    src={featuredProject.image}
-                    alt={`${featuredProject.title} interface`}
-                    className="h-full min-h-64 w-full object-cover object-top"
-                  />
-                ) : (
-                  <div className="flex h-full min-h-64 items-center justify-center px-8 text-center text-xs text-[var(--subtle-foreground)]">
-                    project screenshot pending
+                        return (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="terminal-button"
+                          >
+                            <Icon className="size-3.5" />
+                            {link.label}
+                          </a>
+                        )
+                      })}
+                    </div>
                   </div>
-                )}
-              </div>
-            </div>
-          </article>
+
+                  <div className="min-h-64 border-t border-[var(--border)] bg-[var(--background)] lg:border-l lg:border-t-0">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={`${project.title} interface`}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full min-h-64 w-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="flex h-full min-h-64 items-center justify-center px-8 text-center text-xs text-[var(--subtle-foreground)]">
+                        project screenshot pending
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         ) : null}
 
         {additionalProjects.length > 0 ? (
           <div
             className={[
               "border-y border-[var(--border)]",
-              featuredProject ? "mt-10" : "",
+              featuredProjects ? "mt-10" : "",
             ].join(" ")}
           >
             {additionalProjects.map((project) => (

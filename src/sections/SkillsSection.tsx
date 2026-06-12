@@ -1,13 +1,9 @@
-import { Check } from "lucide-react"
-
 import { SectionHeading } from "@/components/SectionHeading"
-import { skillGroups } from "@/data/skills"
-
-const engineeringFocus = [
-  "Backend and distributed systems",
-  "Developer tooling and automation",
-  "Graphics, emulation, and simulation",
-]
+import {
+  certifications,
+  engineeringFocus,
+  skillGroups,
+} from "@/data/skills"
 
 export function SkillsSection() {
   return (
@@ -38,27 +34,59 @@ export function SkillsSection() {
           ))}
         </div>
 
-        <div className="mt-10 border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
-          <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
-            Engineering focus
+        <div className="mt-14">
+          <p className="mb-5 text-xs lowercase text-[var(--subtle-foreground)]">
+            certifications
           </p>
 
-          <ul className="mt-6 grid gap-4 md:grid-cols-3">
-            {engineeringFocus.map((item) => (
+          <ul className="border-t border-[var(--border)]">
+            {certifications.map((certification) => (
               <li
-                key={item}
-                className="flex items-start gap-3 text-sm leading-6 text-[var(--muted-foreground)]"
+                key={certification.name}
+                className="grid gap-3 border-b border-[var(--border)] py-5 sm:grid-cols-[1fr_auto] sm:items-center"
               >
-                <Check
-                  aria-hidden="true"
-                  className="mt-0.5 size-4 shrink-0 text-[var(--accent)]"
-                />
+                <div className="flex items-start gap-4">
+                  <span
+                    aria-hidden="true"
+                    className="mt-0.5 text-base text-[var(--accent)]"
+                  >
+                    ✓
+                  </span>
 
-                <span>{item}</span>
+                  <div>
+                    {certification.credentialUrl ? (
+                      <a
+                        href={certification.credentialUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
+                      >
+                        {certification.name} ↗
+                      </a>
+                    ) : (
+                      <p className="text-sm text-[var(--foreground)]">
+                        {certification.name}
+                      </p>
+                    )}
+
+                    {certification.issuer ? (
+                      <p className="mt-1 text-xs text-[var(--subtle-foreground)]">
+                        {certification.issuer}
+                      </p>
+                    ) : null}
+                  </div>
+                </div>
+
+                {certification.year ? (
+                  <span className="pl-8 text-xs text-[var(--subtle-foreground)] sm:pl-0">
+                    {certification.year}
+                  </span>
+                ) : null}
               </li>
             ))}
           </ul>
         </div>
+
       </div>
     </section>
   )

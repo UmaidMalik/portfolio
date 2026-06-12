@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+
+  schedule:
+    - cron: "0 8 * * *"
+      timezone: "America/Toronto"
+
   workflow_dispatch:
     inputs:
       theme:
@@ -30,13 +35,6 @@ jobs:
   build:
     name: Build release
     runs-on: ubuntu-latest
-
-    env:
-      VITE_PORTFOLIO_THEME: >-
-        ${{ github.event_name == 'workflow_dispatch'
-          && inputs.theme
-          || vars.PORTFOLIO_THEME
-          || 'cyber-cyan' }}
 
     steps:
       - name: Checkout repository
@@ -80,3 +78,33 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        
+      - name: Select deployment theme
+        id: theme
+        shell: bash
+        env:
+          MANUAL_THEME: ${{ inputs.theme }}
+          DEFAULT_THEME: ${{ vars.PORTFOLIO_THEME }}
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            themes=(
+              "cyber-cyan"
+              "black-green"
+              "purple-lavender"
+              "midnight-amber"
+            )
+
+            day_of_year=$(TZ=America/Toronto date +%j)
+            theme_index=$((10#$day_of_year % ${#themes[@]}))
+            selected_theme="${themes[$theme_index]}"
+
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            selected_theme="$MANUAL_THEME"
+
+          else
+            selected_theme="${DEFAULT_THEME:-cyber-cyan}"
+          fi
+
+          echo "Selected theme: $selected_theme"
+          echo "VITE_PORTFOLIO_THEME=$selected_theme" >> "$GITHUB_ENV"
+          echo "theme=$selected_theme" >> "$GITHUB_OUTPUT"

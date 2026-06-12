@@ -38,6 +38,13 @@ export interface SkillGroup {
   skills: string[]
 }
 
+export interface Certification {
+  name: string
+  issuer?: string
+  year?: string
+  credentialUrl?: string
+}
+
 export interface Education {
   institution: string
   degree: string
