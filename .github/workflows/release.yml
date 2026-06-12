@@ -5,6 +5,17 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      theme:
+        description: Theme to deploy
+        required: true
+        default: cyber-cyan
+        type: choice
+        options:
+          - cyber-cyan
+          - black-green
+          - purple-lavender
+          - midnight-amber
 
 permissions:
   contents: read
@@ -20,6 +31,13 @@ jobs:
     name: Build release
     runs-on: ubuntu-latest
 
+    env:
+      VITE_PORTFOLIO_THEME: >-
+        ${{ github.event_name == 'workflow_dispatch'
+          && inputs.theme
+          || vars.PORTFOLIO_THEME
+          || 'cyber-cyan' }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -29,6 +47,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
+
+      - name: Display selected theme
+        run: echo "Building portfolio with theme $VITE_PORTFOLIO_THEME"
 
       - name: Install dependencies
         run: npm ci
