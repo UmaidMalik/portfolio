@@ -24,7 +24,7 @@ export interface ProjectLink {
 export interface Project {
   title: string
   slug: string
-  category: string
+  category: string[]
   description: string
   technologies: string[]
   links: ProjectLink[]

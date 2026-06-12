@@ -25,7 +25,9 @@ export function ProjectsSection() {
       return projects
     }
 
-    return projects.filter((project) => project.category === activeFilter)
+    return projects.filter((project) =>
+      project.category.includes(activeFilter),
+    )
   }, [activeFilter])
 
   const featuredProjects = filteredProjects.filter((project) => project.featured,)
@@ -81,9 +83,14 @@ export function ProjectsSection() {
                         {String(index + 1).padStart(2, "0")} / FEATURED
                       </span>
 
-                      <span className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--muted-foreground)]">
-                        {project.category}
-                      </span>
+                      {project.category.map((category) => (
+                        <span
+                          key={category}
+                          className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--accent)]"
+                        >
+                          {category}
+                        </span>
+                      ))}
                     </div>
 
                     <h3 className="mt-6 text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl">
@@ -150,7 +157,7 @@ export function ProjectsSection() {
           <div
             className={[
               "border-y border-[var(--border)]",
-              featuredProjects ? "mt-10" : "",
+              featuredProjects.length > 0 ? "mt-10" : "",
             ].join(" ")}
           >
             {additionalProjects.map((project) => (

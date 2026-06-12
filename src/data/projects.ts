@@ -4,9 +4,10 @@ export const projects: Project[] = [
   {
     title: "Incident Management System",
     slug: "incident-management-system",
-    category: "Full-Stack Platform",
+    category: ["Full Stack", "Backend"],
     description:
-      "A production-style incident tracking platform with ticket workflows, assignment, filtering, dashboards, containerized infrastructure, CI/CD, and cloud deployment.",
+      `A production-style incident tracking platform with ticket workflows, assignment,
+       filtering, dashboards, containerized infrastructure, CI/CD, and cloud deployment.`,
     technologies: [
       "React",
       "TypeScript",
@@ -15,6 +16,8 @@ export const projects: Project[] = [
       "Docker",
       "AWS",
       "Terraform",
+      "EC2",
+      "CloudFront",
     ],
     links: [
       {
@@ -35,9 +38,10 @@ export const projects: Project[] = [
   {
     title: "CHIP-8 Emulator",
     slug: "chip8-emulator",
-    category: "Systems",
+    category: ["Systems", "Emulation"],
     description:
-      "A cross-platform CHIP-8 emulator with instruction decoding, timers, keyboard input, SDL3 rendering, automated builds, and packaged releases.",
+      `A cross-platform CHIP-8 emulator with instruction decoding, timers, keyboard 
+      input, SDL3 rendering, automated builds, and packaged releases.`,
     technologies: ["C++23", "SDL3", "CMake", "GitHub Actions"],
     links: [
       {
@@ -63,9 +67,10 @@ export const projects: Project[] = [
   {
     title: "Cellular Automata GPU",
     slug: "cellular-automata-gpu",
-    category: "Simulation",
+    category: ["Simulation", "Graphics"],
     description:
-      "A configurable cellular automata simulation with CPU-based state updates, GPU rendering, and an ImGui control interface. THIS IS A WORK IN PROGRESS",
+      `A configurable cellular automata simulation with CPU-based state updates,
+       GPU rendering, and an ImGui control interface. THIS IS A WORK IN PROGRESS`,
     technologies: ["C++", "SDL3", "SDL_gpu", "ImGui"],
     links: [
       {
@@ -79,9 +84,10 @@ export const projects: Project[] = [
   {
     title: "Interactive OpenGL Scene",
     slug: "opengl-graphics-project",
-    category: "Graphics",
+    category: ["Graphics"],
     description:
-      "A real-time 3D graphics application featuring custom shaders, lighting, textured geometry, camera controls, and skybox rendering.",
+      `A real-time 3D graphics application featuring custom shaders, lighting, 
+      textured geometry, camera controls, and skybox rendering.`,
     technologies: ["C++", "OpenGL", "GLSL", "CMake"],
     links: [
       {
@@ -92,24 +98,14 @@ export const projects: Project[] = [
     ],
     status: "open source",
   },
-  {
-    title: "AI Transcription Service",
-    slug: "ai-transcription-service",
-    category: "Backend",
-    description:
-      "A FastAPI media-processing service that extracts audio with FFmpeg, generates transcripts with Whisper, and produces WebVTT subtitle files.",
-    technologies: ["Python", "FastAPI", "FFmpeg", "Whisper", "MySQL"],
-    links: [],
-    status: "professional",
-  },
   { 
     title: "Snake & Rabbit", 
     slug: "snake-rabbit", 
-    category: "Game Development", 
-    description: "A modern variation of the classic Snake game written in C with raylib. \
-    The rabbit moves away when the snake approaches, and the game includes keyboard and \
-    gamepad controls, a speed boost, score tracking, a CRT-style shader, native desktop \
-    builds, and a WebAssembly browser version.", 
+    category: ["Game", "Graphics"], 
+    description: `A modern variation of the classic Snake game written in C with raylib.
+    The rabbit moves away when the snake approaches, and the game includes keyboard and
+    gamepad controls, a speed boost, score tracking, a CRT-style shader, native desktop
+    builds, and a WebAssembly browser version.`, 
     technologies: [ "C", "raylib", "GLSL", "WebAssembly", "Emscripten", "Premake", "GitHub Actions", "GitHub Pages", ], 
     links: [ 
       { 
@@ -132,4 +128,57 @@ export const projects: Project[] = [
     status: "open source",
     featured: false,
   },
+  {
+    title: "Peer-to-Peer File System",
+    slug: "peer-to-peer-file-system",
+    category: ["Networking", "Backend", "Systems"],
+    description:
+        `A Java peer-to-peer file-sharing application with separate client and server 
+        programs, peer discovery, file transfers, and network communication over UDP 
+        and TCP.`,
+    technologies: [
+        "Java",
+        "TCP",
+        "UDP",
+        "Sockets",
+        "Maven",
+    ],
+    links: [
+        {
+        label: "GitHub",
+        href: "https://github.com/UmaidMalik/Peer-to-Peer-File-System",
+        type: "github",
+        },
+    ],
+    status: "open source",
+    featured: false,
+  },
+  {
+    title: "UVMe Sensor Application",
+    slug: "uvme-sensor-application",
+    category: ["Mobile", "Embedded", "IoT"],
+    description:
+        `A university team project combining an Android application with 
+        Arduino-based UV-sensing hardware to display sensor readings and 
+        support sun-exposure calculations.`,
+    technologies: [
+        "Java",
+        "Android",
+        "Arduino",
+        "C++",
+        "Gradle",
+        "Embedded Systems",
+    ],
+    links: [
+        {
+        label: "GitHub",
+        href: "https://github.com/UmaidMalik/ELEC-COEN-390",
+        type: "github",
+        },
+    ],
+    status: "open source",
+    featured: false,
+  },
+
+
 ]
