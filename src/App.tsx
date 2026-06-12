@@ -1,19 +1,25 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/Header"
+import { ContactSection } from "@/sections/ContactSection"
+import { ExperienceSection } from "@/sections/ExperienceSection"
+import { HeroSection } from "@/sections/HeroSection"
+import { ProjectsSection } from "@/sections/ProjectsSection"
+import { SkillsSection } from "@/sections/SkillsSection"
+import { EducationSection } from "@/sections/EducationSection"
+import { Footer } from "@/components/Footer"
 
-export function App() {
+function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="technical-grid min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <Header/>
+      <main>
+        <HeroSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <EducationSection />
+        <ContactSection />
+      </main>
+      <Footer/>
     </div>
   )
 }
