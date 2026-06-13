@@ -21,6 +21,7 @@ on:
           - black-green
           - purple-lavender
           - midnight-amber
+          - paper-burgundy
 
 permissions:
   contents: read
