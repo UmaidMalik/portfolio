@@ -8,11 +8,17 @@ import { projects } from "@/data/projects"
 
 const filters = [
   { label: "all", value: "all" },
-  { label: "full stack", value: "Full-Stack Platform" },
+  { label: "full stack", value: "Full Stack" },
   { label: "backend", value: "Backend" },
   { label: "systems", value: "Systems" },
   { label: "graphics", value: "Graphics" },
   { label: "simulation", value: "Simulation" },
+  { label: "game", value: "Game"},
+  { label: "networking", value: "Networking"},
+  { label: "mobile", value: "Mobile"},
+  { label: "embedded", value: "Embedded"},
+  { label: "iot", value: "IoT"},
+  { label: "systems", value: "Systems"},
 ] as const
 
 type FilterValue = (typeof filters)[number]["value"]

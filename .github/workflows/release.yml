@@ -92,6 +92,7 @@ jobs:
               "black-green"
               "purple-lavender"
               "midnight-amber"
+              "paper-burgundy"
             )
 
             day_of_year=$(TZ=America/Toronto date +%j)

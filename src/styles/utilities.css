@@ -85,8 +85,8 @@ section[id] {
   transform: translate(-18%, -48%);
   background: radial-gradient(
     circle,
-    var(--glow-color) 0%,
-    rgb(0 229 255 / 3%) 28%,
+    var(--glow-color) 0%,rgba(22, 105, 114, 0.03) 28%,
+    
     transparent 72%
   );
   filter: blur(10px);
@@ -160,4 +160,14 @@ section[id] {
 
 .project-filter-results {
   animation: project-filter-enter 180ms ease-out;
+}
+
+.paper-dots {
+  background-image: radial-gradient(
+    circle,
+    var(--grid-line) 0.7px,
+    transparent 0.8px
+  );
+  background-size: 24px 24px;
+  background-position: center top;
 }

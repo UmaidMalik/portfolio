@@ -28,15 +28,16 @@ export function ProjectRow({ project }: ProjectRowProps) {
               {project.slug}
             </h3>
 
-            <span className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--accent)]">
-              {project.category}
-            </span>
-
-            {project.status === "professional" ? (
-              <span className="text-[0.6rem] text-[var(--subtle-foreground)]">
-                source unavailable
-              </span>
-            ) : null}
+            <div className="mt-3 flex flex-wrap gap-2">
+                {project.category.map((category) => (
+                <span
+                    key={category}
+                    className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--accent)]"
+                >
+                    {category}
+                </span>
+                ))}
+            </div>
           </div>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)]">

@@ -61,3 +61,31 @@
   --hover-glow: 0 0 18px rgb(0 229 255 / 10%);
   --hover-glow-strong: 0 0 28px rgb(0 229 255 / 14%);
 }
+
+:root[data-theme="paper-burgundy"] {
+  --background: #f3efe6;
+  --surface: #f7f3eb;
+  --surface-hover: #eee7dc;
+  --foreground: #241010;
+  --muted-foreground: #7f675c;
+  --subtle-foreground: #b6a89b;
+  --border: #d8cec2;
+  --accent: #b6384d;
+  --accent-hover: #c9475d;
+  --accent-muted: #f1dfe3;
+  --grid-line: transparent;
+  --glow-color: transparent;
+  --glow-size: 0rem;
+  --hover-glow: 0 0 0 transparent;
+  --hover-glow-strong: 0 0 0 transparent;
+}
+
+:root[data-theme="paper-burgundy"] body {
+  background-image: radial-gradient(
+    circle,
+    var(--grid-line) 0.7px,
+    transparent 0.8px
+  );
+  background-size: 24px 24px;
+  background-position: center top;
+}
