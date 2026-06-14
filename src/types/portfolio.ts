@@ -29,7 +29,7 @@ export interface Project {
   technologies: string[]
   links: ProjectLink[]
   featured?: boolean
-  image?: string
+  images?: string[]
   status?: "open source" | "professional" | "archived" | "personal" | "group"
 }
 

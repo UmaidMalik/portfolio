@@ -55,7 +55,6 @@ export function ProjectsSection() {
         >
           {filters.map((filter) => {
             const isActive = activeFilter === filter.value
-
             return (
               <button
                 key={filter.value}
@@ -77,85 +76,89 @@ export function ProjectsSection() {
         <div key={activeFilter} className="project-filter-results">
         {featuredProjects.length > 0 ? (
           <div className="grid gap-8">
-            {featuredProjects.map((project, index) => (
-              <article
-                key={project.slug}
-                className="glow-hover overflow-hidden border border-[var(--border)] bg-[var(--surface)]"
-              >
-                <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
-                  <div className="p-6 sm:p-8 lg:p-10">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <span className="text-xs text-[var(--accent)]">
-                        {String(index + 1).padStart(2, "0")} / FEATURED
-                      </span>
+            {featuredProjects.map((project, index) => {
+              const previewImage = project.images?.[0]
 
-                      {project.category.map((category) => (
-                        <span
-                          key={category}
-                          className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--accent)]"
-                        >
-                          {category}
+              return (
+                <article
+                  key={project.slug}
+                  className="glow-hover overflow-hidden border border-[var(--border)] bg-[var(--surface)]"
+                >
+                  <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+                    <div className="p-6 sm:p-8 lg:p-10">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <span className="text-xs text-[var(--accent)]">
+                          {String(index + 1).padStart(2, "0")} / FEATURED
                         </span>
-                      ))}
-                    </div>
 
-                    <h3 className="mt-6 text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl">
-                      {project.title}
-                    </h3>
-
-                    <p className="mt-5 text-sm leading-7 text-[var(--muted-foreground)]">
-                      {project.description}
-                    </p>
-
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {project.technologies.map((technology) => (
-                        <TechTag key={technology}>{technology}</TechTag>
-                      ))}
-                    </div>
-
-                    <div className="mt-8 flex flex-wrap gap-3">
-                      {project.links.map((link) => {
-                        if (!link.href) {
-                          return null
-                        }
-
-                        const Icon =
-                          link.type === "github" ? FaGithub : ArrowUpRight
-
-                        return (
-                          <a
-                            key={link.label}
-                            href={link.href}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="terminal-button"
+                        {project.category.map((category) => (
+                          <span
+                            key={category}
+                            className="border border-[var(--border)] px-2 py-1 text-[0.6rem] uppercase tracking-wider text-[var(--accent)]"
                           >
-                            <Icon className="size-3.5" />
-                            {link.label}
-                          </a>
-                        )
-                      })}
+                            {category}
+                          </span>
+                        ))}
+                      </div>
+
+                      <h3 className="mt-6 text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl">
+                        {project.title}
+                      </h3>
+
+                      <p className="mt-5 text-sm leading-7 text-[var(--muted-foreground)]">
+                        {project.description}
+                      </p>
+
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {project.technologies.map((technology) => (
+                          <TechTag key={technology}>{technology}</TechTag>
+                        ))}
+                      </div>
+
+                      <div className="mt-8 flex flex-wrap gap-3">
+                        {project.links.map((link) => {
+                          if (!link.href) {
+                            return null
+                          }
+
+                          const Icon =
+                            link.type === "github" ? FaGithub : ArrowUpRight
+
+                          return (
+                            <a
+                              key={link.label}
+                              href={link.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="terminal-button"
+                            >
+                              <Icon className="size-3.5" />
+                              {link.label}
+                            </a>
+                          )
+                        })}
+                      </div>
+                    </div>
+
+                    <div className="min-h-64 border-t border-[var(--border)] bg-[var(--background)] lg:border-l lg:border-t-0">
+                      {previewImage ? (
+                        <img
+                          src={previewImage}
+                          alt={`${project.title} interface`}
+                          loading="lazy"
+                          decoding="async"
+                          className="h-full min-h-64 w-full object-cover object-top"
+                        />
+                      ) : (
+                        <div className="flex h-full min-h-64 items-center justify-center px-8 text-center text-xs text-[var(--subtle-foreground)]">
+                          project screenshot pending
+                        </div>
+                      )}
                     </div>
                   </div>
-
-                  <div className="min-h-64 border-t border-[var(--border)] bg-[var(--background)] lg:border-l lg:border-t-0">
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={`${project.title} interface`}
-                        loading="lazy"
-                        decoding="async"
-                        className="h-full min-h-64 w-full object-cover object-top"
-                      />
-                    ) : (
-                      <div className="flex h-full min-h-64 items-center justify-center px-8 text-center text-xs text-[var(--subtle-foreground)]">
-                        project screenshot pending
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              )
+            })}
           </div>
         ) : null}
 

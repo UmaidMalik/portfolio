@@ -2,6 +2,7 @@ import { ExternalLink, PackageOpen } from "lucide-react"
 import { FaGithub } from "react-icons/fa"
 import { TechTag } from "@/components/TechTag"
 import type { Project } from "@/types/portfolio"
+import { ProjectPreview } from "@/components/ProjectPreview"
 
 interface ProjectRowProps {
   project: Project
@@ -53,6 +54,8 @@ export function ProjectRow({ project }: ProjectRowProps) {
 
         {project.links.length ? (
           <div className="flex gap-3 sm:flex-col sm:items-end">
+            <ProjectPreview project={project} />
+
             {project.links.map((link) => {
               const Icon = getLinkIcon(link.type)
 

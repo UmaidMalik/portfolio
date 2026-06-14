@@ -31,7 +31,7 @@ export const projects: Project[] = [
         type: "live",
       },
     ],
-    image: "/projects/incident-management.webp",
+    images: ["/projects/incident-management.webp"],
     featured: true,
     status: "open source",
   },
@@ -60,13 +60,13 @@ export const projects: Project[] = [
         type: "release",
       },
     ],
-    image: "/projects/chip-8.webp",
+    images: ["/projects/chip-8.webp"],
     featured: true,    
     status: "open source",
   },
   {
-    title: "Cellular Automata GPU",
-    slug: "cellular-automata-gpu",
+    title: "Cellular Automata SDL",
+    slug: "cellular-automata-sdl",
     category: ["Simulation", "Graphics"],
     description:
       `A configurable cellular automata simulation with CPU-based state updates,
@@ -79,6 +79,8 @@ export const projects: Project[] = [
         type: "github",
       },
     ],
+    images: ["/projects/cellular-automata-sdl.webp"],
+    featured: false,
     status: "open source",
   },
   {
@@ -96,7 +98,9 @@ export const projects: Project[] = [
         type: "github",
       },
     ],
+    images: ["/projects/opengl-project.webp"],
     status: "open source",
+    featured: false,
   },
   { 
     title: "Snake & Rabbit", 
@@ -124,7 +128,7 @@ export const projects: Project[] = [
         type: "release", 
       }, 
     ],
-    image: "/projects/snake-rabbit.webp",
+    images: ["/projects/snake-rabbit.webp"],
     status: "open source",
     featured: false,
   },
@@ -177,8 +181,7 @@ export const projects: Project[] = [
         },
     ],
     status: "open source",
+    images: ["/projects/uvme-1.webp", "/projects/uvme-2.webp"],
     featured: false,
   },
-
-
 ]
