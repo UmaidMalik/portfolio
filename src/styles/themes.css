@@ -89,3 +89,26 @@
   background-size: 24px 24px;
   background-position: center top;
 }
+
+:root[data-theme="dual-spectrum"] {
+  --background: #08090d;
+  --surface: #0d0f15;
+  --surface-hover: #12151d;
+  --foreground: #eceaf4;
+  --muted-foreground: #737489;
+  --subtle-foreground: #414354;
+  --border: #1d202a;
+  --accent: #4f9eff;
+  --accent-hover: #72b2ff;
+  --accent-muted: #102745;
+  --accent-software: #4f9eff;
+  --accent-software-muted: #102745;
+  --accent-devops: #ff7043;
+  --accent-devops-muted: #412017;
+  --accent-neutral: #eceaf4;
+  --accent-neutral-muted: #292832;
+  --glow-color: rgb(79 158 255 / 5%);
+  --glow-size: 38rem;
+  --hover-glow: 0 0 12px rgb(79 158 255 / 8%);
+  --hover-glow-strong: 0 0 18px rgb(79 158 255 / 12%);
+}
