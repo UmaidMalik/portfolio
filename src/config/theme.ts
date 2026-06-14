@@ -4,7 +4,6 @@ export const themes = [
   "purple-lavender",
   "midnight-amber",
   "paper-burgundy",
-  "dual-spectrum"
 ] as const
 
 export type ThemeName = (typeof themes)[number]

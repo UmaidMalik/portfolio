@@ -15,7 +15,7 @@ export function HeroSection() {
     <section id="about" className="ambient-glow min-h-screen">
       <div className="page-container flex min-h-screen items-center py-24">
         <div>
-          <p className="mb-5 text-xs font-medium text-[var(--accent-software)]">
+          <p className="mb-5 text-xs font-medium text-[var(--accent)]">
             $ whoami
           </p>
 

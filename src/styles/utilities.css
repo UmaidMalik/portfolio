@@ -171,39 +171,3 @@ section[id] {
   background-size: 24px 24px;
   background-position: center top;
 }
-
-.accent-software {
-  color: var(--accent-software);
-}
-
-.accent-devops {
-  color: var(--accent-devops);
-}
-
-.accent-neutral {
-  color: var(--accent-neutral);
-}
-
-.border-software {
-  border-color: color-mix(
-    in srgb,
-    var(--accent-software) 35%,
-    var(--border)
-  );
-}
-
-.border-devops {
-  border-color: color-mix(
-    in srgb,
-    var(--accent-devops) 35%,
-    var(--border)
-  );
-}
-
-.bg-software-muted {
-  background: var(--accent-software-muted);
-}
-
-.bg-devops-muted {
-  background: var(--accent-devops-muted);
-}
