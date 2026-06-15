@@ -18,7 +18,6 @@ const filters = [
   { label: "mobile", value: "Mobile"},
   { label: "embedded", value: "Embedded"},
   { label: "iot", value: "IoT"},
-  { label: "systems", value: "Systems"},
 ] as const
 
 type FilterValue = (typeof filters)[number]["value"]
