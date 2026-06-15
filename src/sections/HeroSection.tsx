@@ -76,7 +76,7 @@ export function HeroSection() {
   )
 }
 /*
-  <a className="terminal-button" href="/Umaid-Malik-Resume.pdf">
+  <a className="terminal-button" href="/UmaidMalik_Resume.pdf">
     Resume.pdf ↗
   </a>
 */

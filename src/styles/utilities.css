@@ -1,10 +1,16 @@
 .page-container {
-  width: min(100% - 2rem, 960px);
+  width: min(100% - 2rem, 1120px);
   margin-inline: auto;
 }
 
 .section-shell {
-  padding-block: 13rem;
+  padding-block: 8rem;
+}
+
+@media (max-width: 640px) {
+  .section-shell {
+    padding-block: 4rem;
+  }
 }
 
 .terminal-border {

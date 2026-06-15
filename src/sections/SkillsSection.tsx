@@ -24,11 +24,16 @@ export function SkillsSection() {
                 {group.title}
               </h3>
 
-              <p className="mt-6 flex flex-wrap gap-x-3 gap-y-3 text-sm leading-7 text-[var(--muted-foreground)]">
+              <div className="mt-6 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
-                  <span key={skill}>{skill}</span>
+                  <span
+                    key={skill}
+                    className="text-sm text-[var(--muted-foreground)]"
+                  >
+                    [{skill}]
+                  </span>
                 ))}
-              </p>
+              </div>
             </article>
           ))}
         </div>

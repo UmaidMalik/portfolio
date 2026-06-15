@@ -15,12 +15,12 @@ export function SectionHeading({
         $ {command}
       </p>
 
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+      <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
         {title}
       </h2>
 
       {description ? (
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)]">
+        <p className="mt-4 max-w-3xl text-[0.95rem] leading-7 text-[var(--muted-foreground)]">
           {description}
         </p>
       ) : null}

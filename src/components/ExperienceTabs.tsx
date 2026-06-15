@@ -8,7 +8,7 @@ export function ExperienceTabs() {
   const selectedExperience = experience[selectedIndex]
 
   return (
-    <div className="grid gap-8 md:grid-cols-[13rem_1fr] md:gap-12">
+    <div className="grid gap-8 md:grid-cols-[15rem_1fr] md:gap-10">
       <div
         className="flex overflow-x-auto border-b border-[var(--border)] md:block md:overflow-visible md:border-b-0 md:border-r"
         role="tablist"
@@ -35,7 +35,7 @@ export function ExperienceTabs() {
             >
               <span className="block text-xs">{item.company}</span>
 
-              <span className="mt-1 block text-[0.65rem] text-[var(--subtle-foreground)]">
+              <span className="mt-1 block text-[0.70rem] text-[var(--subtle-foreground)]">
                 {item.startDate} – {item.endDate}
               </span>
             </button>
@@ -47,7 +47,7 @@ export function ExperienceTabs() {
         id={`experience-panel-${selectedIndex}`}
         role="tabpanel"
         aria-labelledby={`experience-tab-${selectedIndex}`}
-        className="min-h-[26rem]"
+        className="min-h-[22rem]"
       >
         <header>
           <p className="text-xs text-[var(--accent)]">
@@ -66,7 +66,7 @@ export function ExperienceTabs() {
           </div>
         </header>
 
-        <p className="mt-7 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)]">
+        <p className="mt-7 max-w-2xl text-[0.95rem] leading-7 text-[var(--muted-foreground)]">
           {selectedExperience.summary}
         </p>
 
@@ -74,7 +74,7 @@ export function ExperienceTabs() {
           {selectedExperience.achievements.map((achievement) => (
             <li
               key={achievement}
-              className="flex gap-3 text-sm leading-7 text-[var(--muted-foreground)]"
+              className="flex gap-3 text-[0.95rem] leading-7 text-[var(--muted-foreground)]"
             >
               <span
                 aria-hidden="true"
