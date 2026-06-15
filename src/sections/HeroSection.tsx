@@ -25,7 +25,7 @@ export function HeroSection() {
 
           <p
             className="mt-4 min-h-8 text-xl text-[var(--accent)]"
-            aria-label="Software developer, backend engineer, devops engineer, and developer tools engineer"
+            aria-label="Software developer, backend engineer, and devops engineer"
           >
             <span aria-hidden="true">{role}</span>
             <span
@@ -37,9 +37,9 @@ export function HeroSection() {
           </p>
 
           <p className="mt-7 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)] sm:text-base">
-            I build backend applications, developer tools, infrastructure
-            automation, and systems software using Java, Python, TypeScript,
-            and C++.
+            I turn complex problems into practical software systems,
+            combining backend engineering, product thinking, automation,
+            and a strong focus on reliability and real-world constraints.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -60,10 +60,6 @@ export function HeroSection() {
             >
               LinkedIn ↗
             </a>
-
-            <a className="terminal-button" href="/Umaid-Malik-Resume.pdf">
-              Resume.pdf ↗
-            </a>
           </div>
         </div>
       </div>
@@ -79,3 +75,8 @@ export function HeroSection() {
     </section>
   )
 }
+/*
+  <a className="terminal-button" href="/Umaid-Malik-Resume.pdf">
+    Resume.pdf ↗
+  </a>
+*/
