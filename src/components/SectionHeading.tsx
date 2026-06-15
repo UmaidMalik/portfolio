@@ -1,5 +1,5 @@
 interface SectionHeadingProps {
-  command: string
+  command?: string
   title: string
   description?: string
 }
@@ -11,9 +11,11 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <header className="mb-10">
-      <p className="mb-3 text-xs font-medium text-[var(--accent)]">
-        $ {command}
-      </p>
+      {command && (
+        <p className="mb-3 text-xs font-medium text-[var(--accent)]">
+          $ {command}
+        </p>
+      )}
 
       <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
         {title}

@@ -7,9 +7,10 @@ export function ContactSection() {
   return (
     <section id="contact" className="section-shell">
       <div className="page-container">
+        <SectionHeading command="ping umaid@dev" title="Contact" />
         <div className="ambient-glow-subtle border border-[var(--border)] bg-[var(--surface)] p-7 sm:p-10">
           <SectionHeading
-            command="ping umaid@dev"
+            
             title="Get in touch"
             description="I’m open to software development opportunities in Montreal and Toronto/GTA."
           />
