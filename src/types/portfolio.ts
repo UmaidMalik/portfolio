@@ -43,6 +43,7 @@ export interface Certification {
   issuer?: string
   year?: string
   credentialUrl?: string
+  credentialId?: string
 }
 
 export interface Education {

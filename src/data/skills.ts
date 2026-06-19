@@ -78,6 +78,12 @@ export const certifications: Certification[] = [
     year: "2024",
     credentialUrl: "https://www.credly.com/badges/1f23e543-76b4-48c0-9a50-f0ce63efab50/public_url",
   },
+    {
+    name: "GitOps Certified for Argo: GitOps Fundamentals Level I",
+    issuer: "Codefresh",
+    year: "2026",
+    credentialId: "6a348b12086376779a05ce60",
+  },
 ]
 
 export const engineeringFocus = [
