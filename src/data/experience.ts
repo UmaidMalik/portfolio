@@ -3,7 +3,7 @@ import type { Experience } from "@/types/portfolio"
 export const experience: Experience[] = [
   {
     company: "Morgan Stanley",
-    role: "Production Support Trainee",
+    role: "Reliability & Production Engineer",
     startDate: "August 2026",
     endDate: "Present",
     location: "Montreal, QC",
