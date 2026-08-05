@@ -11,6 +11,7 @@ export const skillGroups: SkillGroup[] = [
       "C++",
       "C",
       "SQL",
+      "Bash",
       "Groovy",
     ],
   },
@@ -22,15 +23,12 @@ export const skillGroups: SkillGroup[] = [
       "Flask",
       "REST APIs",
       "MySQL",
-      "MongoDB",
     ],
   },
   {
     title: "Frontend",
     skills: [
       "React",
-      "Angular",
-      "Vite",
       "Tailwind CSS",
       "shadcn/ui",
     ],

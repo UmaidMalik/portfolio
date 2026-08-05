@@ -2,27 +2,20 @@ import type { Experience } from "@/types/portfolio"
 
 export const experience: Experience[] = [
   {
-    company: "Mthree",
+    company: "Morgan Stanley",
     role: "Production Support Trainee",
-    startDate: "May 2026",
+    startDate: "August 2026",
     endDate: "Present",
     location: "Montreal, QC",
     summary:
-      "Completed production-support training focused on incident management, Linux, SQL, monitoring, scripting, and enterprise support workflows.",
+      "Supporting a global reliability engineering environment involving production systems, incident management, troubleshooting, and automation.",
     achievements: [
-      "Built a full-stack incident-management platform using React, TypeScript, Flask, and MySQL.",
-      "Implemented ticket workflows, assignment, filtering, dashboards, and incident status tracking.",
-      "Worked with Docker, AWS, Terraform, CI/CD, Prometheus, and Grafana.",
+      "In progress",
     ],
     technologies: [
-      "React",
-      "TypeScript",
-      "Flask",
-      "MySQL",
-      "Linux",
-      "Docker",
-      "AWS",
-      "Terraform",
+      "Python",
+      "SQL",
+      "Snowflake",
     ],
   },
   {
