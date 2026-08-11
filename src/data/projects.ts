@@ -2,6 +2,32 @@ import type { Project } from "@/types/portfolio"
 
 export const projects: Project[] = [
   {
+    title: "Shahi Palace Restaurant Website",
+    slug: "shahi-palace-restaurant-website",
+    category: ["Frontend", "Web Development"],
+    description:
+      `A responsive bilingual restaurant website built and maintained for Shahi Palace,
+        featuring reusable UI components, mobile-friendly layouts, menu and business
+        information, and automated CI/CD deployment.`,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "GitHub Actions",
+    ],
+    links: [
+      {
+        label: "Live Site",
+        href: "https://shahipalace.ca/",
+        type: "live",
+      },
+    ],
+    images: ["/projects/shahi-palace-2.webp"],
+    featured: true,
+    status: "professional",
+  },
+  {
     title: "Incident Management System",
     slug: "incident-management-system",
     category: ["Full Stack", "Backend"],
