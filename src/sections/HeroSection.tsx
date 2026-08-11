@@ -2,7 +2,6 @@ import { useTypewriter } from "@/hooks/useTypewriter"
 
 const roles = [
   "Software Developer",
-  "Backend Engineer",
   "DevOps Engineer",
 ]
 
@@ -25,7 +24,7 @@ export function HeroSection() {
 
           <p
             className="mt-4 min-h-8 text-xl text-[var(--accent)]"
-            aria-label="Software developer, backend engineer, and devops engineer"
+            aria-label="Software developer, and devops engineer"
           >
             <span aria-hidden="true">{role}</span>
             <span
