@@ -37,9 +37,10 @@ export function HeroSection() {
           </p>
 
           <p className="mt-7 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)] sm:text-base">
-            I turn complex problems into practical software systems,
-            combining backend engineering, product thinking, automation,
-            and a strong focus on reliability and real-world constraints.
+              I’m a computer engineer interested in embedded systems, electronics, 
+              control, and automation. I enjoy building and understanding systems 
+              from the hardware and sensing layer through control logic and 
+              software, with an emphasis on practical, reliable engineering.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
