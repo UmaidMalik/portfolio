@@ -1,8 +1,9 @@
 import { useTypewriter } from "@/hooks/useTypewriter"
 
 const roles = [
-  "Software Developer",
-  "DevOps Engineer",
+  "Computer Engineer",
+  "Embedded Systems Engineer",
+  "Controls & Automation",
 ]
 
 export function HeroSection() {
