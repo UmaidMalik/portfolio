@@ -4,6 +4,7 @@ const roles = [
   "Computer Engineer",
   "Embedded Systems Engineer",
   "Controls & Automation",
+  "DevOps Engineer,
 ]
 
 export function HeroSection() {
