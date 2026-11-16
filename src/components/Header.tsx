@@ -1,3 +1,4 @@
+import { BrandMark } from "@/components/BrandMark"
 import { MobileMenu } from "@/components/MobileMenu"
 import {
   type SectionId,
@@ -8,12 +9,12 @@ const navigationItems: Array<{
   id: SectionId
   label: string
 }> = [
-  { id: "about", label: "about" },
-  { id: "projects", label: "projects" },
-  { id: "experience", label: "experience" },
-  { id: "skills", label: "skills" },
-  { id: "education", label: "education" },
-  { id: "contact", label: "contact" },
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
+  { id: "contact", label: "Contact" },
 ]
 
 export function Header() {
@@ -26,7 +27,7 @@ export function Header() {
           href="#about"
           className="text-xs text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
         >
-          ~/<span className="text-[var(--accent)]">umaid.malik</span>
+          <BrandMark />
         </a>
 
         <nav
@@ -42,13 +43,13 @@ export function Header() {
                 href={`#${item.id}`}
                 aria-current={isActive ? "page" : undefined}
                 className={[
-                  "text-xs transition-colors",
+                  "border-b-2 pb-2 pt-2 text-xs transition-colors",
                   isActive
-                    ? "text-[var(--accent)]"
-                    : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]",
+                    ? "border-[var(--accent)] text-[var(--accent)]"
+                    : "border-transparent text-[var(--muted-foreground)] hover:border-[var(--border)] hover:text-[var(--foreground)]",
                 ].join(" ")}
               >
-                {isActive ? `[${item.label}]` : item.label}
+                {item.label}
               </a>
             )
           })}

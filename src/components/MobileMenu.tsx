@@ -1,3 +1,4 @@
+import { BrandMark } from "@/components/BrandMark"
 import { Menu } from "lucide-react"
 
 import type { SectionId } from "@/hooks/useActiveSection"
@@ -19,12 +20,12 @@ const navigationItems: Array<{
   id: SectionId
   label: string
 }> = [
-  { id: "about", label: "about" },
-  { id: "projects", label: "projects" },
-  { id: "experience", label: "experience" },
-  { id: "skills", label: "skills" },
-  { id: "education", label: "education" },
-  { id: "contact", label: "contact" },
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
+  { id: "contact", label: "Contact" },
 ]
 
 export function MobileMenu({ activeSection }: MobileMenuProps) {
@@ -46,8 +47,8 @@ export function MobileMenu({ activeSection }: MobileMenuProps) {
         className="border-[var(--border)] bg-[var(--background)] text-[var(--foreground)]"
       >
         <SheetHeader>
-          <SheetTitle className="text-left font-mono text-[var(--accent)]">
-            ~/umaid.malik
+          <SheetTitle className="text-left">
+            <BrandMark />
           </SheetTitle>
         </SheetHeader>
 
@@ -59,14 +60,15 @@ export function MobileMenu({ activeSection }: MobileMenuProps) {
               <SheetClose asChild key={item.id}>
                 <a
                   href={`#${item.id}`}
+                  aria-current={isActive ? "page" : undefined}
                   className={[
                     "border-b border-[var(--border)] px-1 py-4 text-sm transition-colors",
                     isActive
-                      ? "text-[var(--accent)]"
+                      ? "border-b-[var(--accent)] text-[var(--accent)]"
                       : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]",
                   ].join(" ")}
                 >
-                  {isActive ? `[${item.label}]` : item.label}
+                  {item.label}
                 </a>
               </SheetClose>
             )
