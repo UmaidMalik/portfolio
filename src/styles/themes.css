@@ -124,3 +124,21 @@
   --hover-glow: 0 6px 20px rgb(0 0 0 / 15%);
   --hover-glow-strong: 0 6px 20px rgb(0 0 0 / 22%);
 }
+
+:root[data-theme="electrical-notebook-black"] {
+  --background: #070707;
+  --surface: #111111;
+  --surface-hover: #1b1b1b;
+  --foreground: #eeeeeb;
+  --muted-foreground: #b8b8b2;
+  --subtle-foreground: #999994;
+  --border: #303030;
+  --accent: #e5c28b;
+  --accent-hover: #f3d5a5;
+  --accent-muted: #30291f;
+  --grid-line: transparent;
+  --glow-color: transparent;
+  --glow-size: 0rem;
+  --hover-glow: 0 6px 20px rgb(0 0 0 / 20%);
+  --hover-glow-strong: 0 6px 20px rgb(0 0 0 / 30%);
+}

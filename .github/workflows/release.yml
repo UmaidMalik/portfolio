@@ -14,9 +14,10 @@ on:
       theme:
         description: Theme to deploy
         required: true
-        default: electrical-notebook-dark
+        default: electrical-notebook-black
         type: choice
         options:
+          - electrical-notebook-black
           - electrical-notebook-dark
           - electrical-notebook
           - cyber-cyan
@@ -59,6 +60,7 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             themes=(
+              "electrical-notebook-black"
               "electrical-notebook-dark"
               "electrical-notebook"
               "cyber-cyan"
@@ -76,7 +78,7 @@ jobs:
             selected_theme="$MANUAL_THEME"
 
           else
-            selected_theme="${DEFAULT_THEME:-electrical-notebook-dark}"
+            selected_theme="${DEFAULT_THEME:-electrical-notebook-black}"
           fi
 
           echo "Selected theme: $selected_theme"

@@ -1,6 +1,7 @@
 export const themes = [
   "electrical-notebook",
   "electrical-notebook-dark",
+  "electrical-notebook-black",
   "cyber-cyan",
   "black-green",
   "purple-lavender",
@@ -10,7 +11,7 @@ export const themes = [
 
 export type ThemeName = (typeof themes)[number]
 
-const DEFAULT_THEME: ThemeName = "electrical-notebook-dark"
+const DEFAULT_THEME: ThemeName = "electrical-notebook-black"
 
 function isThemeName(value: unknown): value is ThemeName {
   return (

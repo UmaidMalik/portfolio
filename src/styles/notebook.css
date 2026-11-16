@@ -1,16 +1,16 @@
 /* Electrical sketches are decorative; reading surfaces remain opaque. */
-:root:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) { font-family: "Geist Variable", "Segoe UI", sans-serif; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .technical-grid {
+:root:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) { font-family: "Geist Variable", "Segoe UI", sans-serif; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .technical-grid {
   background-image: url("/electrical-doodles.svg");
   background-size: 640px 560px;
 }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) body { -webkit-font-smoothing: antialiased; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) #about { min-height: auto; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) #about > .page-container {
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) body { -webkit-font-smoothing: antialiased; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #about { min-height: auto; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #about > .page-container {
   min-height: min(880px, 100svh);
   padding-block: 8rem 5rem;
 }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .hero-notebook {
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook {
   width: 100%;
   max-width: 840px;
   padding: clamp(1.5rem, 5vw, 4rem);
@@ -20,7 +20,7 @@
   box-shadow: 8px 9px 0 #e3e7dd, 0 16px 45px rgb(32 58 60 / 5%);
   position: relative;
 }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .hero-notebook::before {
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook::before {
   content: "FIELD NOTES / 001";
   display: block;
   margin-bottom: 2rem;
@@ -28,27 +28,27 @@
   letter-spacing: .2em;
   color: var(--subtle-foreground);
 }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) h1 { font-size: clamp(3rem, 7vw, 5.75rem); letter-spacing: -.065em; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) h2 { letter-spacing: -.045em; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .section-shell { padding-block: 3rem; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .section-shell > .page-container {
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) h1 { font-size: clamp(3rem, 7vw, 5.75rem); letter-spacing: -.065em; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) h2 { letter-spacing: -.045em; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell { padding-block: 3rem; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell > .page-container {
   padding: clamp(1.25rem, 4vw, 3.5rem);
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
 }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .terminal-button { border-radius: 7px; font-weight: 500; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .terminal-button-primary { color: #fffdf8; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .glow-hover { border-radius: 8px; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .section-eyebrow { font: 11px ui-monospace, monospace; letter-spacing: .15em; text-transform: uppercase; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) #projects article { background-color: #f8f9f3; }
-:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) footer { background: var(--surface); margin-top: 3rem; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .terminal-button { border-radius: 7px; font-weight: 500; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .terminal-button-primary { color: #fffdf8; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .glow-hover { border-radius: 8px; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-eyebrow { font: 11px ui-monospace, monospace; letter-spacing: .15em; text-transform: uppercase; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #projects article { background-color: #f8f9f3; }
+:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) footer { background: var(--surface); margin-top: 3rem; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 @media (max-width: 640px) {
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) #about > .page-container { min-height: auto; padding-block: 6.5rem 2rem; }
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .hero-notebook { box-shadow: 4px 5px 0 #e3e7dd; }
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .section-shell { padding-block: 1.25rem; }
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"]) .technical-grid { background-size: 480px 420px; }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #about > .page-container { min-height: auto; padding-block: 6.5rem 2rem; }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook { box-shadow: 4px 5px 0 #e3e7dd; }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell { padding-block: 1.25rem; }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .technical-grid { background-size: 480px 420px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -60,3 +60,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 [data-theme="electrical-notebook-dark"] .terminal-button-primary { color: #14232b; }
 [data-theme="electrical-notebook-dark"] .technical-grid { background-image: url("/electrical-doodles-dark.svg"); }
 @media (max-width: 640px) { [data-theme="electrical-notebook-dark"] .hero-notebook { box-shadow: 4px 5px 0 #1d333b; } }
+
+[data-theme="electrical-notebook-black"] .hero-notebook { box-shadow: 8px 9px 0 #202020, 0 16px 45px rgb(0 0 0 / 25%); }
+[data-theme="electrical-notebook-black"] #projects article { background-color: #151515; }
+[data-theme="electrical-notebook-black"] .terminal-button-primary { color: #080808; }
+[data-theme="electrical-notebook-black"] .technical-grid { background-image: url("/electrical-doodles-dark.svg"); }
+@media (max-width: 640px) { [data-theme="electrical-notebook-black"] .hero-notebook { box-shadow: 4px 5px 0 #202020; } }

@@ -12,7 +12,7 @@ Changes are developed on `dev`, built by CI, and reviewed before promotion to `m
 
 ## Electrical Notebook Themes
 
-The default local theme is `electrical-notebook-dark`: navy paper panels, amber accents, and an electrical doodle background. The light `electrical-notebook` theme remains available alongside all five original themes. Both notebook themes are CI/CD deployment choices and participate in scheduled rotation after this branch is approved and merged. A configured `PORTFOLIO_THEME` repository variable takes precedence over the fallback on ordinary pushes.
+The default local theme is `electrical-notebook-black`: near-black backgrounds, charcoal panels, warm amber accents, and electrical doodles. The navy `electrical-notebook-dark` and light `electrical-notebook` themes remain available alongside all five original themes. All three notebook themes are CI/CD deployment choices and participate in scheduled rotation after this branch is approved and merged. A configured `PORTFOLIO_THEME` repository variable takes precedence over the fallback on ordinary pushes.
 
 To preview the light version locally, set `VITE_PORTFOLIO_THEME=electrical-notebook` before starting Vite. Clear the variable to return to the dark default.
 
