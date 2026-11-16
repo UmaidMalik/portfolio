@@ -2,7 +2,7 @@
 :root:is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) { font-family: "Geist Variable", "Segoe UI", sans-serif; }
 :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .technical-grid {
   background-image: url("/electrical-doodles.svg");
-  background-size: 640px 560px;
+  background-size: 1120px 1000px;
 }
 :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) body { -webkit-font-smoothing: antialiased; }
 :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #about { min-height: auto; }
@@ -48,7 +48,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #about > .page-container { min-height: auto; padding-block: 6.5rem 2rem; }
   :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook { box-shadow: 4px 5px 0 #e3e7dd; }
   :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell { padding-block: 1.25rem; }
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .technical-grid { background-size: 480px 420px; }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .technical-grid { background-size: 840px 750px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
