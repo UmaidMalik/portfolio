@@ -10,8 +10,8 @@ export function SkillsSection() {
       <div className="page-container">
         <SectionHeading
           command="skills --list"
-          title="Technical Skills"
-          description="Technologies I have used across application development, production delivery, infrastructure, and systems projects."
+          title="Technical Foundation"
+          description="Tools used in my professional work and completed projects. My developing electrical engineering interests are described separately from this experience."
         />
 
         <div className="grid border-l border-t border-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">

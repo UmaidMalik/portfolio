@@ -9,8 +9,8 @@ const navigationItems: Array<{
   label: string
 }> = [
   { id: "about", label: "about" },
-  { id: "experience", label: "experience" },
   { id: "projects", label: "projects" },
+  { id: "experience", label: "experience" },
   { id: "skills", label: "skills" },
   { id: "education", label: "education" },
   { id: "contact", label: "contact" },
@@ -26,7 +26,7 @@ export function Header() {
           href="#about"
           className="text-xs text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
         >
-          ~/<span className="text-[var(--accent)]">dev.portfolio</span>
+          ~/<span className="text-[var(--accent)]">umaid.malik</span>
         </a>
 
         <nav

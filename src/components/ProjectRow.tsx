@@ -26,7 +26,7 @@ export function ProjectRow({ project }: ProjectRowProps) {
         <div>
           <div className="flex flex-wrap items-center gap-3">
             <h3 className="text-sm font-semibold text-[var(--foreground)]">
-              {project.slug}
+              {project.title}
             </h3>
 
             <div className="mt-3 flex flex-wrap gap-2">

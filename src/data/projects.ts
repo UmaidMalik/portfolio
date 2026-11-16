@@ -24,7 +24,7 @@ export const projects: Project[] = [
       },
     ],
     images: ["/projects/shahi-palace-2.webp"],
-    featured: true,
+    featured: false,
     status: "professional",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       },
     ],
     images: ["/projects/incident-management.webp"],
-    featured: true,
+    featured: false,
     status: "open source",
   },
   {
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     slug: "chip8-emulator",
     category: ["Systems", "Emulation"],
     description:
-      `A cross-platform CHIP-8 emulator with instruction decoding, timers, keyboard 
+      `A cross-platform CHIP-8 emulator with instruction decoding, timers, keyboard
       input, SDL3 rendering, automated builds, and packaged releases.`,
     technologies: ["C++23", "SDL3", "CMake", "GitHub Actions"],
     links: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
         label: "Live Demo",
         href: "https://umaidmalik.github.io/chip-8",
         type: "live",
-      },      
+      },
       {
         label: "Releases",
         href: "https://github.com/UmaidMalik/chip-8/releases",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       },
     ],
     images: ["/projects/chip-8.webp"],
-    featured: true,    
+    featured: false,
     status: "open source",
   },
   {
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     slug: "opengl-graphics-project",
     category: ["Graphics"],
     description:
-      `A real-time 3D graphics application featuring custom shaders, lighting, 
+      `A real-time 3D graphics application featuring custom shaders, lighting,
       textured geometry, camera controls, and skybox rendering.`,
     technologies: ["C++", "OpenGL", "GLSL", "CMake"],
     links: [
@@ -128,31 +128,31 @@ export const projects: Project[] = [
     status: "open source",
     featured: false,
   },
-  { 
-    title: "Snake & Rabbit", 
-    slug: "snake-rabbit", 
-    category: ["Game", "Graphics"], 
+  {
+    title: "Snake & Rabbit",
+    slug: "snake-rabbit",
+    category: ["Game", "Graphics"],
     description: `A modern variation of the classic Snake game written in C with raylib.
     The rabbit moves away when the snake approaches, and the game includes keyboard and
     gamepad controls, a speed boost, score tracking, a CRT-style shader, native desktop
-    builds, and a WebAssembly browser version.`, 
-    technologies: [ "C", "raylib", "GLSL", "WebAssembly", "Emscripten", "Premake", "GitHub Actions", "GitHub Pages", ], 
-    links: [ 
-      { 
-        label: "GitHub", 
-        href: "https://github.com/UmaidMalik/snake-rabbit", 
-        type: "github", 
-      }, 
-      { 
-        label: "Play Online", 
-        href: "https://umaidmalik.github.io/snake-rabbit/", 
+    builds, and a WebAssembly browser version.`,
+    technologies: [ "C", "raylib", "GLSL", "WebAssembly", "Emscripten", "Premake", "GitHub Actions", "GitHub Pages", ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/UmaidMalik/snake-rabbit",
+        type: "github",
+      },
+      {
+        label: "Play Online",
+        href: "https://umaidmalik.github.io/snake-rabbit/",
         type: "live",
       },
-      { 
+      {
         label: "Releases",
         href: "https://github.com/UmaidMalik/snake-rabbit/releases",
-        type: "release", 
-      }, 
+        type: "release",
+      },
     ],
     images: ["/projects/snake-rabbit.webp"],
     status: "open source",
@@ -163,8 +163,8 @@ export const projects: Project[] = [
     slug: "peer-to-peer-file-system",
     category: ["Networking", "Backend", "Systems"],
     description:
-        `A Java peer-to-peer file-sharing application with separate client and server 
-        programs, peer discovery, file transfers, and network communication over UDP 
+        `A Java peer-to-peer file-sharing application with separate client and server
+        programs, peer discovery, file transfers, and network communication over UDP
         and TCP.`,
     technologies: [
         "Java",
@@ -188,8 +188,8 @@ export const projects: Project[] = [
     slug: "uvme-sensor-application",
     category: ["Mobile", "Embedded", "IoT"],
     description:
-        `A university team project combining an Android application with 
-        Arduino-based UV-sensing hardware to display sensor readings and 
+        `A university team project combining an Android application with
+        Arduino-based UV-sensing hardware to display sensor readings and
         support sun-exposure calculations.`,
     technologies: [
         "Java",
@@ -208,6 +208,6 @@ export const projects: Project[] = [
     ],
     status: "open source",
     images: ["/projects/uvme-1.webp", "/projects/uvme-2.webp"],
-    featured: false,
+    featured: true,
   },
 ]

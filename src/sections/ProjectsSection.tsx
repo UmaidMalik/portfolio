@@ -8,6 +8,8 @@ import { projects } from "@/data/projects"
 
 const filters = [
   { label: "all", value: "all" },
+  { label: "embedded", value: "Embedded" },
+  { label: "iot", value: "IoT" },
   { label: "full stack", value: "Full Stack" },
   { label: "backend", value: "Backend" },
   { label: "systems", value: "Systems" },
@@ -16,8 +18,7 @@ const filters = [
   { label: "game", value: "Game"},
   { label: "networking", value: "Networking"},
   { label: "mobile", value: "Mobile"},
-  { label: "embedded", value: "Embedded"},
-  { label: "iot", value: "IoT"},
+
 ] as const
 
 type FilterValue = (typeof filters)[number]["value"]
@@ -44,8 +45,35 @@ export function ProjectsSection() {
         <SectionHeading
           command="ls -la ~/projects"
           title="Projects"
-          description="Selected applications, systems projects, developer tools, and infrastructure work."
+          description="Current work in embedded sensing and motor control, followed by projects from my computer engineering and software background."
         />
+
+        <div className="mb-14 grid gap-6 md:grid-cols-2">
+          <article className="glow-hover border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
+            <p className="text-xs uppercase tracking-widest text-[var(--accent)]">01 / In development</p>
+            <h3 className="mt-5 text-2xl font-semibold">ESP32 Environmental Monitor</h3>
+            <p className="mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
+              An environmental monitoring project built around an ESP32 with a Qwiic
+              sensor interface. Development is underway, with a focus on bringing
+              sensing and embedded electronics together in a physical device.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2"><TechTag>ESP32</TechTag><TechTag>Environmental sensing</TechTag><TechTag>Qwiic / I²C</TechTag></div>
+            <p className="mt-6 border-t border-[var(--border)] pt-4 text-xs leading-6 text-[var(--muted-foreground)]">Current stage: active development. Build documentation and results will be added as the project progresses.</p>
+          </article>
+          <article className="glow-hover border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
+            <p className="text-xs uppercase tracking-widest text-[var(--accent)]">02 / Early concept</p>
+            <h3 className="mt-5 text-2xl font-semibold">BLDC Motor Control</h3>
+            <p className="mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
+              A personal project exploring brushless DC motor control and the
+              relationship between power electronics, electric machines, and
+              embedded control. The project is currently at the concept stage.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2"><TechTag>Motor control</TechTag><TechTag>Power electronics</TechTag><TechTag>Embedded systems</TechTag></div>
+            <p className="mt-6 border-t border-[var(--border)] pt-4 text-xs leading-6 text-[var(--muted-foreground)]">Current stage: initial parts ordered. Schematic design has not yet started.</p>
+          </article>
+        </div>
+        <h3 className="mb-3 text-xl font-semibold">Earlier projects &amp; software work</h3>
+        <p className="mb-6 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)]">Previous work in sensor integration, emulation, simulation, and application development. These projects form part of my technical foundation.</p>
 
         <div
           className="mb-8 flex flex-wrap gap-2"

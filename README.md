@@ -1,8 +1,8 @@
 # Umaid Malik — Developer Portfolio
 
-A responsive, terminal-inspired software development portfolio built with React, TypeScript, Tailwind CSS, and shadcn/ui.
+A responsive engineering portfolio built with React, TypeScript, Tailwind CSS, and shadcn/ui.
 
-The portfolio showcases my professional experience, technical skills, education, certifications, and selected projects across backend development, developer tooling, DevOps, infrastructure automation, graphics, and systems programming.
+The portfolio presents my computer engineering background and direction toward electrical systems, power electronics, motor control, and embedded systems. Professional software, DevOps, and reliability experience remains part of the record, alongside completed projects and clearly labelled ongoing work.
 
 **Live site:** [umaidmalik.com](https://umaidmalik.com)
 

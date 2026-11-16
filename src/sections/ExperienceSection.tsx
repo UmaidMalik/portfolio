@@ -7,8 +7,8 @@ export function ExperienceSection() {
       <div className="page-container">
         <SectionHeading
           command="cat experience.log"
-          title="Work Experience"
-          description="Application development, production delivery, developer tooling, and infrastructure automation."
+          title="Professional Background"
+          description="Experience in software, automation, and production reliability that informs how I approach engineering problems."
         />
 
         <ExperienceTabs />

@@ -20,9 +20,10 @@ const navigationItems: Array<{
   label: string
 }> = [
   { id: "about", label: "about" },
-  { id: "experience", label: "experience" },
   { id: "projects", label: "projects" },
+  { id: "experience", label: "experience" },
   { id: "skills", label: "skills" },
+  { id: "education", label: "education" },
   { id: "contact", label: "contact" },
 ]
 
@@ -46,7 +47,7 @@ export function MobileMenu({ activeSection }: MobileMenuProps) {
       >
         <SheetHeader>
           <SheetTitle className="text-left font-mono text-[var(--accent)]">
-            ~/dev.portfolio
+            ~/umaid.malik
           </SheetTitle>
         </SheetHeader>
 

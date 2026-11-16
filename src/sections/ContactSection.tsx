@@ -7,12 +7,12 @@ export function ContactSection() {
   return (
     <section id="contact" className="section-shell">
       <div className="page-container">
-        <SectionHeading command="ping umaid@dev" title="Contact" />
+        <SectionHeading command="Let’s connect" title="Contact" />
         <div className="ambient-glow-subtle border border-[var(--border)] bg-[var(--surface)] p-7 sm:p-10">
           <SectionHeading
             
             title="Get in touch"
-            description="I’m open to software development opportunities in Montreal and Toronto/GTA."
+            description="I’m interested in connecting with teams working on electrical systems, power electronics, motor control, and embedded hardware."
           />
 
           <div className="flex flex-wrap gap-3">

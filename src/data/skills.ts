@@ -2,6 +2,10 @@ import type { SkillGroup, Certification } from "@/types/portfolio"
 
 export const skillGroups: SkillGroup[] = [
   {
+    title: "Embedded & Systems Projects",
+    skills: ["Arduino", "C", "C++", "Sensor integration", "SDL3", "CMake"],
+  },
+  {
     title: "Languages",
     skills: [
       "Java",
