@@ -42,6 +42,8 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             themes=(
+              "electrical-notebook-dark"
+              "electrical-notebook"
               "cyber-cyan"
               "black-green"
               "purple-lavender"
@@ -57,7 +59,10 @@ jobs:
             selected_theme="$MANUAL_THEME"
 
           else
-            selected_theme="${DEFAULT_THEME:-cyber-cyan}"
+            selected_theme="${DEFAULT_THEME:-electrical-notebook-dark}"
+            if [[ "${{ github.ref }}" == "refs/heads/dev" || "${{ github.head_ref }}" == "dev" ]]; then
+              selected_theme="${DEFAULT_THEME:-electrical-notebook-dark}"
+            fi
           fi
 
           echo "Selected theme: $selected_theme"

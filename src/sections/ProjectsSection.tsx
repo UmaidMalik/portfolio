@@ -43,7 +43,7 @@ export function ProjectsSection() {
     <section id="projects" className="section-shell">
       <div className="page-container">
         <SectionHeading
-          command="ls -la ~/projects"
+          command="01 / Projects & explorations"
           title="Projects"
           description="Current work in embedded sensing and motor control, followed by projects from my computer engineering and software background."
         />

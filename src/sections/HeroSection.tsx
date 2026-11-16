@@ -2,7 +2,7 @@ export function HeroSection() {
   return (
     <section id="about" className="ambient-glow min-h-screen">
       <div className="page-container flex min-h-screen items-center py-28">
-        <div>
+        <div className="hero-notebook">
           <p className="mb-5 text-xs font-medium uppercase tracking-widest text-[var(--accent)]">Engineering portfolio / Montreal</p>
           <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">Umaid Malik</h1>
           <p className="mt-5 max-w-3xl text-2xl leading-snug text-[var(--accent)] sm:text-4xl">From computing to the physical world.</p>
