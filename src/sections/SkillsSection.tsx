@@ -9,7 +9,7 @@ export function SkillsSection() {
     <section id="skills" className="section-shell">
       <div className="page-container">
         <SectionHeading
-          command="skills --list"
+          command="03 / Technical foundation"
           title="Technical Foundation"
           description="Tools used in my professional work and completed projects. My developing electrical engineering interests are described separately from this experience."
         />

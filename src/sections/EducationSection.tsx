@@ -5,7 +5,7 @@ export function EducationSection() {
   return (
     <section id="education" className="section-shell">
       <div className="page-container">
-        <SectionHeading command="cat education.log" title="Education" />
+        <SectionHeading command="04 / Education" title="Education" />
 
         <div className="divide-y divide-[var(--border)] border border-[var(--border)]">
           {education.map((item) => (

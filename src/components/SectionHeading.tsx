@@ -12,8 +12,8 @@ export function SectionHeading({
   return (
     <header className="mb-10">
       {command && (
-        <p className="mb-3 text-xs font-medium text-[var(--accent)]">
-          $ {command}
+        <p className="section-eyebrow mb-3 text-xs font-medium text-[var(--accent)]">
+          {command}
         </p>
       )}
 

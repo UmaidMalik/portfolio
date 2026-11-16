@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="560" viewBox="0 0 640 560"><g fill="none" stroke="#9cb8bc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".22">
+<!-- Resistor and capacitor -->
+<g transform="translate(42 48) rotate(-12)"><path d="M0 15h20l5-9 8 18 8-18 8 18 8-18 5 9h22"/><circle cx="0" cy="15" r="3"/><circle cx="84" cy="15" r="3"/></g>
+<g transform="translate(235 40) rotate(14)"><path d="M0 25h30m0-17v34m10-34v34m0-17h30"/></g>
+<!-- Scope -->
+<g transform="translate(410 32) rotate(-7)"><rect width="92" height="66" rx="9"/><rect x="9" y="9" width="58" height="42" rx="3"/><path d="M15 31h7l7-14 12 28 10-28 8 14h3"/><circle cx="79" cy="20" r="4"/><circle cx="79" cy="37" r="3"/><path d="M16 66l-6 9m65-9 7 9"/></g>
+<!-- Sine -->
+<g transform="translate(42 190) rotate(7)"><path d="M0 30h96M8 0v60m2-30c12-42 27-42 39 0s27 42 39 0"/></g>
+<!-- op amp -->
+<g transform="translate(208 155) rotate(-9)"><path d="m20 0 58 35-58 35zm-20 18h20M0 52h20m58-17h25M29 19h10m-5-5v10m-5 27h10"/><circle cx="103" cy="35" r="3"/></g>
+<!-- motor -->
+<g transform="translate(478 190) rotate(11)"><circle r="31"/><path d="M-12 10v-22L0 4l12-16v22M-31 0h-22m84 0h22M-11-31v-14m22 14v-14"/><path d="M-30 42q32 17 58-2m-4-6 6 6-8 4"/></g>
+<!-- battery -->
+<g transform="translate(345 285) rotate(13)"><path d="M0 0h24v52H0zm8-5h8v5M7 13h10m-5-5v10m-5 24h10"/></g>
+<!-- microcontroller -->
+<g transform="translate(120 334) rotate(-13)"><rect width="55" height="62" rx="5"/><rect x="10" y="14" width="35" height="33" rx="3"/><path d="M0 12h-10m10 12h-10m10 12h-10m10 12h-10m65-36h10m-10 12h10m-10 12h10m-10 12h10M12 0v-10m15 10v-10m15 10v-10M12 62v10m15-10v10m15-10v10"/></g>
+<!-- transistor -->
+<g transform="translate(510 390) rotate(-12)"><circle cx="25" cy="25" r="29"/><path d="M-15 25h29m0-17v34m0-22 28-17m-28 27 28 17m0-44v-14m0 58v14m-8-24 8 10-12-2"/></g>
+<!-- ground and inductor -->
+<g transform="translate(271 455) rotate(9)"><path d="M0 0v24m-20 0h40m-32 8h24m-18 8h12"/></g>
+<g transform="translate(392 485) rotate(-8)"><path d="M0 15h12c0-24 16-24 16 0 0-24 16-24 16 0 0-24 16-24 16 0 0-24 16-24 16 0h14"/></g>
+<!-- little traces and sparks -->
+<path d="M590 60v32h27m-28 45 8-8m-17 5v-12M35 450h28v32h24M365 132l-8 15h12l-8 15M202 260l7 7m-7 0 7-7M570 295h8m-4-4v8M50 520h9m-5-5v10"/>
+<circle cx="617" cy="92" r="3"/><circle cx="87" cy="482" r="3"/><circle cx="330" cy="390" r="3"/><circle cx="195" cy="95" r="2"/>
+</g></svg>

@@ -6,6 +6,16 @@ The portfolio presents my computer engineering background and direction toward e
 
 **Live site:** [umaidmalik.com](https://umaidmalik.com)
 
+## Development and approval
+
+Changes are developed on `dev`, built by CI, and reviewed before promotion to `main` through a pull request. Only `main` deploys the live site. See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and preview process.
+
+## Electrical Notebook Themes
+
+The default local theme is `electrical-notebook-black`: near-black backgrounds, charcoal panels, warm amber accents, and electrical doodles. The navy `electrical-notebook-dark` and light `electrical-notebook` themes remain available alongside all five original themes. All three notebook themes are CI/CD deployment choices and participate in scheduled rotation after this branch is approved and merged. A configured `PORTFOLIO_THEME` repository variable takes precedence over the fallback on ordinary pushes.
+
+To preview the light version locally, set `VITE_PORTFOLIO_THEME=electrical-notebook` before starting Vite. Clear the variable to return to the dark default.
+
 ## Daily Theme Rotation
 
 The portfolio theme changes automatically every day at **08:00 America/Toronto**.

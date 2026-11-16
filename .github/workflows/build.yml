@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - dev
   pull_request:
     branches:
       - main
+      - dev
   workflow_dispatch:
 
 permissions:
@@ -40,6 +42,9 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             themes=(
+              "electrical-notebook-black"
+              "electrical-notebook-dark"
+              "electrical-notebook"
               "cyber-cyan"
               "black-green"
               "purple-lavender"
@@ -55,7 +60,10 @@ jobs:
             selected_theme="$MANUAL_THEME"
 
           else
-            selected_theme="${DEFAULT_THEME:-cyber-cyan}"
+            selected_theme="${DEFAULT_THEME:-electrical-notebook-black}"
+            if [[ "${{ github.ref }}" == "refs/heads/dev" || "${{ github.head_ref }}" == "dev" ]]; then
+              selected_theme="${DEFAULT_THEME:-electrical-notebook-black}"
+            fi
           fi
 
           echo "Selected theme: $selected_theme"

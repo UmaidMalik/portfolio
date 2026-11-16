@@ -14,9 +14,12 @@ on:
       theme:
         description: Theme to deploy
         required: true
-        default: cyber-cyan
+        default: electrical-notebook-black
         type: choice
         options:
+          - electrical-notebook-black
+          - electrical-notebook-dark
+          - electrical-notebook
           - cyber-cyan
           - black-green
           - purple-lavender
@@ -35,6 +38,7 @@ concurrency:
 jobs:
   build:
     name: Build release
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -56,6 +60,9 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             themes=(
+              "electrical-notebook-black"
+              "electrical-notebook-dark"
+              "electrical-notebook"
               "cyber-cyan"
               "black-green"
               "purple-lavender"
@@ -71,7 +78,7 @@ jobs:
             selected_theme="$MANUAL_THEME"
 
           else
-            selected_theme="${DEFAULT_THEME:-cyber-cyan}"
+            selected_theme="${DEFAULT_THEME:-electrical-notebook-black}"
           fi
 
           echo "Selected theme: $selected_theme"

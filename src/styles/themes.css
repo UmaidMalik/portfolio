@@ -89,3 +89,56 @@
   background-size: 24px 24px;
   background-position: center top;
 }
+:root[data-theme="electrical-notebook"] {
+  --background: #f3f0e8;
+  --surface: #fffdf8;
+  --surface-hover: #eeeee4;
+  --foreground: #203a3c;
+  --muted-foreground: #506466;
+  --subtle-foreground: #637779;
+  --border: #d6ded6;
+  --accent: #22675e;
+  --accent-hover: #174e47;
+  --accent-muted: #e5efe7;
+  --grid-line: transparent;
+  --glow-color: transparent;
+  --glow-size: 0rem;
+  --hover-glow: 0 5px 16px rgb(32 58 60 / 6%);
+  --hover-glow-strong: 0 5px 16px rgb(32 58 60 / 10%);
+}
+
+:root[data-theme="electrical-notebook-dark"] {
+  --background: #0c171d;
+  --surface: #13232b;
+  --surface-hover: #192f38;
+  --foreground: #e5eeeb;
+  --muted-foreground: #b2c4c5;
+  --subtle-foreground: #91aaad;
+  --border: #31474e;
+  --accent: #efbd70;
+  --accent-hover: #f7ce90;
+  --accent-muted: #343127;
+  --grid-line: transparent;
+  --glow-color: transparent;
+  --glow-size: 0rem;
+  --hover-glow: 0 6px 20px rgb(0 0 0 / 15%);
+  --hover-glow-strong: 0 6px 20px rgb(0 0 0 / 22%);
+}
+
+:root[data-theme="electrical-notebook-black"] {
+  --background: #070707;
+  --surface: #111111;
+  --surface-hover: #1b1b1b;
+  --foreground: #eeeeeb;
+  --muted-foreground: #b8b8b2;
+  --subtle-foreground: #999994;
+  --border: #303030;
+  --accent: #e5c28b;
+  --accent-hover: #f3d5a5;
+  --accent-muted: #30291f;
+  --grid-line: transparent;
+  --glow-color: transparent;
+  --glow-size: 0rem;
+  --hover-glow: 0 6px 20px rgb(0 0 0 / 20%);
+  --hover-glow-strong: 0 6px 20px rgb(0 0 0 / 30%);
+}
