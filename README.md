@@ -6,6 +6,10 @@ The portfolio presents my computer engineering background and direction toward e
 
 **Live site:** [umaidmalik.com](https://umaidmalik.com)
 
+## Development and approval
+
+Changes are developed on `dev`, built by CI, and reviewed before promotion to `main` through a pull request. Only `main` deploys the live site. See [CONTRIBUTING.md](CONTRIBUTING.md) for the review and preview process.
+
 ## Daily Theme Rotation
 
 The portfolio theme changes automatically every day at **08:00 America/Toronto**.
