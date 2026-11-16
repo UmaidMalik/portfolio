@@ -56,7 +56,7 @@ jobs:
         shell: bash
         env:
           MANUAL_THEME: ${{ inputs.theme }}
-          DEFAULT_THEME: ${{ vars.PORTFOLIO_THEME }}
+          DEFAULT_THEME: electrical-notebook-black
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             themes=(
