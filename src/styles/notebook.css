@@ -66,3 +66,34 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 [data-theme="electrical-notebook-black"] .terminal-button-primary { color: #080808; }
 [data-theme="electrical-notebook-black"] .technical-grid { background-image: url("/electrical-doodles-dark.svg"); }
 @media (max-width: 640px) { [data-theme="electrical-notebook-black"] .hero-notebook { box-shadow: 4px 5px 0 #202020; } }
+
+/* Phones need a dedicated strip: opaque panels otherwise hide nearly all doodles. */
+@media (max-width: 640px) {
+  :root[data-theme="electrical-notebook"] { --mobile-doodles: url("/electrical-doodles-mobile.svg"); }
+  :root:is([data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) { --mobile-doodles: url("/electrical-doodles-dark-mobile.svg"); }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .technical-grid {
+    background-image: var(--mobile-doodles);
+    background-size: 448px 400px;
+  }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-bottom: 20px;
+    background-image: var(--mobile-doodles);
+    background-size: 448px 400px;
+    background-position: center 220px;
+    pointer-events: none;
+  }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook::after {
+    content: "";
+    display: block;
+    height: 70px;
+    margin-top: 24px;
+    border-top: 1px solid var(--border);
+    background-image: var(--mobile-doodles);
+    background-size: 448px 400px;
+    background-position: center 110px;
+    pointer-events: none;
+  }
+}
