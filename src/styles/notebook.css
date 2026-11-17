@@ -67,7 +67,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 [data-theme="electrical-notebook-black"] .technical-grid { background-image: url("/electrical-doodles-dark.svg"); }
 @media (max-width: 640px) { [data-theme="electrical-notebook-black"] .hero-notebook { box-shadow: 4px 5px 0 #202020; } }
 
-/* Phones need a dedicated strip: opaque panels otherwise hide nearly all doodles. */
+/* One continuous mobile pattern; section gaps expose it without duplicate layers. */
 @media (max-width: 640px) {
   :root[data-theme="electrical-notebook"] { --mobile-doodles: url("/electrical-doodles-mobile.svg"); }
   :root:is([data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) { --mobile-doodles: url("/electrical-doodles-dark-mobile.svg"); }
@@ -75,25 +75,28 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     background-image: var(--mobile-doodles);
     background-size: 448px 400px;
   }
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell::before {
-    content: "";
-    display: block;
-    height: 80px;
-    margin-bottom: 20px;
-    background-image: var(--mobile-doodles);
-    background-size: 448px 400px;
-    background-position: center 220px;
-    pointer-events: none;
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell {
+    padding-block: 2.5rem;
   }
-  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook::after {
-    content: "";
-    display: block;
-    height: 70px;
-    margin-top: 24px;
-    border-top: 1px solid var(--border);
-    background-image: var(--mobile-doodles);
-    background-size: 448px 400px;
-    background-position: center 110px;
-    pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #experience [role="tablist"] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    overflow: visible;
+    border: 0;
+  }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #experience [role="tab"] {
+    min-width: 0;
+    padding: 12px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) #experience [role="tab"][aria-selected="true"] {
+    border-color: var(--accent);
+    background: var(--accent-muted);
+    box-shadow: none;
   }
 }
