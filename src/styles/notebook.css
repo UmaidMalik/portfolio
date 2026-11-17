@@ -100,3 +100,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     box-shadow: none;
   }
 }
+
+/* Keep the wallpaper visible through phone-sized notebook pages. */
+@media (max-width: 640px) {
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) main .page-container {
+    width: calc(100% - 3rem);
+  }
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .hero-notebook,
+  :is([data-theme="electrical-notebook"], [data-theme="electrical-notebook-dark"], [data-theme="electrical-notebook-black"]) .section-shell > .page-container {
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+  }
+}
