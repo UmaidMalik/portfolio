@@ -142,3 +142,53 @@
   --hover-glow: 0 6px 20px rgb(0 0 0 / 20%);
   --hover-glow-strong: 0 6px 20px rgb(0 0 0 / 30%);
 }
+
+/* Colour themes share one electrical notebook design, including legacy palette names. */
+:root[data-theme] {
+  color-scheme: dark;
+  --doodle-background: url("/electrical-doodles-dark.svg");
+  --mobile-doodles: url("/electrical-doodles-dark-mobile.svg");
+  --notebook-shadow: color-mix(in srgb, var(--surface) 85%, white);
+  --project-surface: var(--surface-hover);
+  --button-foreground: var(--background);
+  --glow-color: transparent;
+  --glow-size: 0rem;
+  --hover-glow: 0 6px 20px rgb(0 0 0 / 15%);
+  --hover-glow-strong: 0 6px 20px rgb(0 0 0 / 22%);
+}
+:root:is([data-theme="electrical-notebook"], [data-theme="paper-burgundy"]) {
+  color-scheme: light;
+  --doodle-background: url("/electrical-doodles.svg");
+  --mobile-doodles: url("/electrical-doodles-mobile.svg");
+  --notebook-shadow: #e3e7dd;
+  --button-foreground: #fffdf8;
+}
+:root[data-theme="electrical-notebook"] { --project-surface: #f8f9f3; }
+:root[data-theme="electrical-notebook-dark"] {
+  --notebook-shadow: #1d333b;
+  --project-surface: #162932;
+  --button-foreground: #14232b;
+}
+:root[data-theme="electrical-notebook-black"] {
+  --notebook-shadow: #202020;
+  --project-surface: #151515;
+  --button-foreground: #080808;
+}
+:root[data-theme="black-green"] {
+  --accent-hover: #43ed76;
+  --muted-foreground: #acb8af;
+  --subtle-foreground: #8b9c90;
+  --border: #2c3a30;
+}
+:root[data-theme="purple-lavender"] {
+  --accent-hover: #c891ff;
+  --muted-foreground: #b5a7cb;
+  --subtle-foreground: #9d8fb3;
+  --border: #3a2e4b;
+}
+:root[data-theme="midnight-amber"] {
+  --muted-foreground: #a7b8cf;
+  --subtle-foreground: #8c9fb8;
+  --border: #2c405b;
+}
+:root[data-theme="paper-burgundy"] { --subtle-foreground: #806e63; }

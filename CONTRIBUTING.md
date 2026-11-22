@@ -5,7 +5,7 @@
 - Let Umaid inspect the changes and a preview before promoting them.
 - Open a pull request from `dev` to `main`. Wait for Umaid's explicit approval before merging or pushing changes to `main`.
 - A merge to `main` triggers the production GitHub Pages deployment at https://umaidmalik.com.
-- Scheduled theme rotation continues to rebuild production from `main`.
+- Scheduled rebuilds publish `main` with `electrical-notebook-black`; other palettes are manual deployment choices and share the electrical notebook design.
 
 ## Preview
 

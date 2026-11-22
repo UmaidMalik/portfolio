@@ -23,7 +23,7 @@ export function ProjectRow({ project }: ProjectRowProps) {
   return (
     <article className="glow-hover border-b border-[var(--border)] px-1 py-7 last:border-b-0 sm:px-4">
       <div className="grid gap-5 sm:grid-cols-[1fr_auto]">
-        <div>
+        <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-3">
             <h3 className="text-sm font-semibold text-[var(--foreground)]">
               {project.title}
@@ -53,7 +53,7 @@ export function ProjectRow({ project }: ProjectRowProps) {
         </div>
 
         {project.links.length ? (
-          <div className="flex gap-3 sm:flex-col sm:items-end">
+          <div className="flex min-w-0 flex-wrap gap-3 sm:flex-col sm:items-end">
             <ProjectPreview project={project} />
 
             {project.links.map((link) => {

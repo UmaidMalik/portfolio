@@ -40,30 +40,9 @@ jobs:
           MANUAL_THEME: ${{ inputs.theme }}
           DEFAULT_THEME: electrical-notebook-black
         run: |
-          if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            themes=(
-              "electrical-notebook-black"
-              "electrical-notebook-dark"
-              "electrical-notebook"
-              "cyber-cyan"
-              "black-green"
-              "purple-lavender"
-              "midnight-amber"
-              "paper-burgundy"
-            )
-
-            day_of_year=$(TZ=America/Toronto date +%j)
-            theme_index=$((10#$day_of_year % ${#themes[@]}))
-            selected_theme="${themes[$theme_index]}"
-
-          elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          selected_theme="$DEFAULT_THEME"
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && -n "$MANUAL_THEME" ]]; then
             selected_theme="$MANUAL_THEME"
-
-          else
-            selected_theme="${DEFAULT_THEME:-electrical-notebook-black}"
-            if [[ "${{ github.ref }}" == "refs/heads/dev" || "${{ github.head_ref }}" == "dev" ]]; then
-              selected_theme="${DEFAULT_THEME:-electrical-notebook-black}"
-            fi
           fi
 
           echo "Selected theme: $selected_theme"
