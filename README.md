@@ -12,15 +12,15 @@ Changes are developed on `dev`, built by CI, and reviewed before promotion to `m
 
 ## Electrical Notebook Themes
 
-The default local theme is `electrical-notebook-black`: near-black backgrounds, charcoal panels, muted coral accents, and electrical doodles. The navy `electrical-notebook-dark` and light `electrical-notebook` themes remain available alongside all five original themes. All three notebook themes are CI/CD deployment choices and participate in scheduled rotation after this branch is approved and merged. Ordinary pushes use the black default; manual workflow dispatch can select any theme.
+The default local theme is `electrical-notebook-black`: near-black backgrounds, charcoal panels, muted coral accents, and electrical doodles. The navy `electrical-notebook-dark` and light `electrical-notebook` themes remain available alongside all five original themes. All eight themes use the electrical notebook layout, doodles, and mobile styling. The older theme names select colour palettes, not the legacy terminal design. Pushes and scheduled rebuilds use the black default; manual workflow dispatch can select any palette.
 
 To preview the light version locally, set `VITE_PORTFOLIO_THEME=electrical-notebook` before starting Vite. Clear the variable to return to the dark default.
 
-## Daily Theme Rotation
+## Daily Rebuild
 
-The portfolio theme changes automatically every day at **08:00 America/Toronto**.
+The portfolio rebuilds every day at **08:00 America/Toronto** using `electrical-notebook-black`. The schedule does not rotate the palette.
 
-A scheduled GitHub Actions workflow selects a theme, injects it into the Vite production build through an environment variable, and deploys the resulting site to GitHub Pages.
+The release workflow injects the default palette into the Vite production build and deploys the resulting site to GitHub Pages. Other palettes remain available through the manual deployment selector; the next scheduled rebuild returns to the black default.
 
 ## Tech
 
