@@ -95,8 +95,8 @@ export const projects: Project[] = [
     slug: "cellular-automata-sdl",
     category: ["Simulation", "Graphics"],
     description:
-      `A configurable cellular automata simulation with CPU-based state updates,
-       GPU rendering, and an ImGui control interface. THIS IS A WORK IN PROGRESS`,
+      `A completed cellular automata simulation with configurable behaviour, CPU-based
+       state updates, GPU rendering, and an ImGui control interface.`,
     technologies: ["C++", "SDL3", "SDL_gpu", "ImGui"],
     links: [
       {
