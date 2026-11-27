@@ -95,17 +95,23 @@ export const projects: Project[] = [
     slug: "cellular-automata-sdl",
     category: ["Simulation", "Graphics"],
     description:
-      `A completed cellular automata simulation with configurable behaviour, CPU-based
-       state updates, GPU rendering, and an ImGui control interface.`,
-    technologies: ["C++", "SDL3", "SDL_gpu", "ImGui"],
+      `An interactive GPU-based cellular automata simulator for desktop and the browser,
+       with configurable rule presets, neighbourhoods, colour blending, fading trails,
+       and an ImGui control interface.`,
+    technologies: ["C++", "SDL3", "SDL_gpu", "ImGui", "WebGL 2", "Emscripten"],
     links: [
       {
         label: "GitHub",
         href: "https://github.com/UmaidMalik/cellular-automata-sdl",
         type: "github",
       },
+      {
+        label: "Live Demo",
+        href: "https://umaidmalik.github.io/cellular-automata-sdl/",
+        type: "live",
+      },
     ],
-    images: ["/projects/cellular-automata-sdl.webp"],
+    images: ["/projects/cellular-automata-sdl-readme.png"],
     featured: false,
     status: "open source",
   },
